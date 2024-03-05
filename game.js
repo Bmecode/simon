@@ -14,6 +14,14 @@ $(document).keydown(function(){
         started=true;
     }
 });
+//benim yazdığım buton
+$("#restart").click(function(){
+    if(!started){
+        $("#level-title").text("Level " + level);
+        nextSequence();
+        started=true;
+    }
+});
 
 $(".btn").click(function(){
     
@@ -41,8 +49,6 @@ function checkAnswer(currentLevel) {
             $("#level-title").text("Game Over, Press Any Key to Restart");
             startOver();
         }
-    
-    
 }
 
 function nextSequence() {
